@@ -1,0 +1,44 @@
+body {
+  color: rgb(25, 25, 31);
+  background-color: rgb(140, 163, 226);
+}
+
+.city-result {
+  margin-left: 50px;
+}
+
+.search-button {
+  border-radius: 3px;
+  padding: 3px 4px;
+  transition: all 200ms ease;
+  background-color: rgb(95, 129, 224);
+  font-size: 17px;
+}
+.search-button:hover {
+  color: rgb(194, 199, 219);
+  background: rgb(38, 47, 172);
+}
+.search-form {
+  font-size: 20px;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+ul {
+  list-style: none;
+  margin-bottom: 20px;
+}
+.col-2 {
+  font-size: 20px;
+}
+
+p {
+  font-size: 25px;
+}
+
+.fa-cloud {
+  color: white;
+}
+
+.fa-cloud-rain {
+  color: rgb(88, 94, 109);
+}
