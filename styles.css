@@ -42,3 +42,12 @@ p {
 .fa-cloud-rain {
   color: rgb(88, 94, 109);
 }
+
+.clearfix .active {
+  color: rgb(25, 25, 31);
+  cursor: default;
+}
+
+.clearfix .active:hover {
+  text-decoration: none;
+}
