@@ -23,6 +23,10 @@ function formatDate(date) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function formatHours(timestamp) {
+  return `${hours}:${minutes}`;
+}
+
 function displayWeatherCondition(response) {
   celsiusTemperature = response.data.main.temp;
   document.querySelector("#city").innerHTML = response.data.name;
@@ -48,16 +52,21 @@ function displayWeatherCondition(response) {
 
 function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
+  let forecast = response.data.list[0];
+
   forecastElement.innerHTML = `<div class="row weather-forecast" id="forecast">
       <div class="col-2">
         <ul>
-          <li>12:00</li>
+          <li>${forecast.dt}</li>
         </ul>
         <img
-          src="https://ssl.gstatic.com/onebox/weather/48/rain_s_cloudy.png"
-          alt=""
+          src="http://openweathermap.org/img/wn${
+            forecast.weather[0].icon
+          }@2x.png"
         />
-        <div class="weather-forecast-temperature"><strong>16°</strong> 15°
+        <div class="weather-forecast-temperature"><strong>${Math.round(
+          forecast.main.temp_max
+        )}°</strong> ${Math.round(forecast.main.temp_min)}°
       </div>
     </div>`;
 }
