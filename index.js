@@ -64,7 +64,7 @@ function displayForecast(response) {
           <li>${formatHours(forecast.dt * 1000)}</li>
         </ul>
         <img
-          src="http://openweathermap.org/img/wn${
+          src="http://openweathermap.org/img/wn/${
             forecast.weather[0].icon
           }@2x.png"
         />
